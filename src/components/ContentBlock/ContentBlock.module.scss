@@ -1,0 +1,24 @@
+@import "../../tokens";
+
+.ContentBlock {
+  background-color: $color-white;
+  border-radius: $radius-medium;
+  padding: $space-medium;
+  & + & {
+    margin-top: 24px;
+  }
+
+  p {
+    line-height: 20px;
+    font-size: 14px;
+  }
+
+  p + p {
+    margin-top: 8px;
+  }
+}
+
+.ContentBlock__title {
+  font-size: 24px;
+  margin-bottom: 12px;
+}

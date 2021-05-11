@@ -1,0 +1,30 @@
+@mixin buttonReset {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+  border: none;
+  outline: none;
+  background: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+@mixin inputReset {
+  padding: 0;
+  text-align: left;
+  opacity: 1;
+  color: inherit;
+  border: none;
+  background: transparent;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  //safari disabled input bug
+  -webkit-text-fill-color: $color-text-primary;
+}
