@@ -1,4 +1,5 @@
 import { Routes } from "../utils/Routes";
+import { BlogsPage } from "./BlogsPage/BlogsPage";
 import IndexPage from "./IndexPage/IndexPage";
 import BaseLayouts from "./_layouts/BaseLayouts";
 
@@ -8,6 +9,11 @@ const routes = [
     exact: true,
     component: BaseLayouts(IndexPage),
   },
+  {
+    path: '/blogs',
+    exact: true,
+    component: BaseLayouts(BlogsPage)
+  }
 ];
 
 const AppRoutes = Routes(routes);

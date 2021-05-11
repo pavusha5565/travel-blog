@@ -95,7 +95,7 @@ export default function IndexPage(props) {
         <div className={s.image__blur} />
       </div>
       <ContentBlock className={s.iconBlock}>
-        <Link to={"/blog"} className={s.iconBlock__content}>
+        <Link to={"/blogs"} className={s.iconBlock__content}>
           Блог
           <ArticleIcon />
         </Link>

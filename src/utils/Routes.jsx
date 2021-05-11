@@ -2,11 +2,7 @@ import React, { useEffect } from "react";
 import {
   Route,
   Switch,
-  match as Match,
-  RouteProps,
-  withRouter,
 } from "react-router-dom";
-import { Location } from "history";
 import { useLocation } from "react-router";
 
 function ScrollToTop({ children }) {

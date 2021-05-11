@@ -1,0 +1,22 @@
+@import "../../tokens";
+
+.Tag {
+    background-color: $color-primary;
+    color: $color-white;
+    padding: $space-small;
+    border-radius: $space-small;
+    white-space: nowrap;
+    max-width: 125px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.Tags {
+    display: flex;
+    align-items: center;
+    margin: $space-medium 0;
+}
+
+.Tags__element + .Tags__element {
+    margin-left: $space-small;
+}
