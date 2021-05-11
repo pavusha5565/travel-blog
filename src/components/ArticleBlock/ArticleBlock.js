@@ -34,25 +34,33 @@ export function ArticleBlock({
   const [rating, setRating] = useState(0);
 
   const parsedContent = useMemo(() => {
-    return article.map((data) => {
+    return article.map((data, i) => {
       if (data.type === dataTypeEnum.IMAGE) {
         return (
-          <div className={s.content__image}>
+          <div key={i} className={s.content__image}>
             <img src={data.content} />
           </div>
         );
       }
       if (data.type === dataTypeEnum.LINK) {
         return (
-          <a className={s.content__link} href={data.content}>
+          <a key={i} className={s.content__link} href={data.content}>
             {data.content}
           </a>
         );
       }
       if (data.type === dataTypeEnum.HEADER) {
-        return <p className={s.content__header}>{data.content}</p>;
+        return (
+          <p key={i} className={s.content__header}>
+            {data.content}
+          </p>
+        );
       }
-      return <p className={s.content__article}>{data.content}</p>;
+      return (
+        <p key={i} className={s.content__article}>
+          {data.content}
+        </p>
+      );
     });
   });
 

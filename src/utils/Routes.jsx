@@ -10,30 +10,13 @@ function ScrollToTop({ children }) {
   return <>{children}</>;
 }
 
-// const routes = [
-//   {
-//     path: "/",
-//     exact: true,
-//     component: BaseLayouts(IndexPage),
-//   },
-//   {
-//     path: '/blogs',
-//     exact: true,
-//     component: BaseLayouts(BlogsPage)
-//   },
-//   {
-//     path: `/blogs/:id`,
-//     exact: true,
-//     component: BaseLayouts(ArticlePage)
-//   }
-// ];
 
 export function Routes(routes) {
   return function RoutesComp({ location, match }) {
     const pathPrefix = match?.path || "";
     return (
       <ScrollToTop>
-        <Switch {...{ location }}>
+        <Switch>
           {routes.map((props, i) => {
             const path = props.path ? `${pathPrefix}${props.path}` : undefined;
             const newProps = {

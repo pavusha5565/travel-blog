@@ -3,15 +3,15 @@ import ReactDOM from "react-dom";
 import "./index.scss";
 import App from "./App";
 import { createBrowserHistory } from "history";
-import { Router } from "react-router-dom";
+import { Router, BrowserRouter } from "react-router-dom";
 
 const history = createBrowserHistory();
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router history={history}>
+    <BrowserRouter history={history}>
       <App />
-    </Router>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
