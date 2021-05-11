@@ -8,9 +8,10 @@ export function Tags({ tags }) {
   const history = useHistory();
   return (
     <div className={s.Tags}>
-      {tags.map((tag) => {
+      {tags.map((tag, i) => {
         return (
           <Tag
+            key={i}
             title={tag.title}
             onClick={tag.link && history.push(tag.link)}
             tagColor={tag.color}

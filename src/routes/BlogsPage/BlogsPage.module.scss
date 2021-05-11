@@ -1,2 +1,11 @@
 @import "../../tokens";
 
+.BlogsPage__article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  > div {
+    margin: $space-medium $space-large;
+  }
+}

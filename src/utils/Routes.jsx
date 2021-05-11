@@ -1,8 +1,5 @@
 import React, { useEffect } from "react";
-import {
-  Route,
-  Switch,
-} from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import { useLocation } from "react-router";
 
 function ScrollToTop({ children }) {
@@ -12,6 +9,24 @@ function ScrollToTop({ children }) {
   }, [pathname]);
   return <>{children}</>;
 }
+
+// const routes = [
+//   {
+//     path: "/",
+//     exact: true,
+//     component: BaseLayouts(IndexPage),
+//   },
+//   {
+//     path: '/blogs',
+//     exact: true,
+//     component: BaseLayouts(BlogsPage)
+//   },
+//   {
+//     path: `/blogs/:id`,
+//     exact: true,
+//     component: BaseLayouts(ArticlePage)
+//   }
+// ];
 
 export function Routes(routes) {
   return function RoutesComp({ location, match }) {

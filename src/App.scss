@@ -25,7 +25,13 @@ time, mark, audio, video {
 	font-size: 100%;
 	vertical-align: baseline;
 }
+button {
+	background-color: $color-white;
+	border: none;
+	cursor: pointer;
+}
 a {
+	display: block;
 	cursor: pointer;
 	color: inherit;
 	text-decoration: none;
