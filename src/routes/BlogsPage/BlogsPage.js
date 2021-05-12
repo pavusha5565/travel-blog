@@ -3,7 +3,7 @@ import {
   ArticleBlock,
   dataTypeEnum,
 } from "../../components/ArticleBlock/ArticleBlock";
-import data from "../../data.json";
+import data from "../../articles_data.json";
 import s from "./BlogsPage.module.scss";
 
 export function BlogsPage() {

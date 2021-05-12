@@ -2,6 +2,7 @@ import React, { useMemo, useState } from "react";
 import clsx from "clsx";
 import { Tags } from "../Tags/Tags";
 import { Link } from "react-router-dom";
+import { parseNumber } from "../../utils/string";
 import s from "./ArticleBlock.module.scss";
 
 export const dataTypeEnum = {
@@ -9,14 +10,6 @@ export const dataTypeEnum = {
   IMAGE: "image",
   LINK: "link",
   HEADER: "header",
-};
-
-const parseNumber = (number) => {
-  return number > 1000000
-    ? (number / 1000000).toFixed(0) + "М"
-    : number > 1000
-    ? (number / 1000).toFixed(0) + "К"
-    : number;
 };
 
 export function ArticleBlock({
@@ -34,7 +27,7 @@ export function ArticleBlock({
   const [rating, setRating] = useState(0);
 
   const parsedContent = useMemo(() => {
-    return article.map((data, i) => {
+    return article?.map((data, i) => {
       if (data.type === dataTypeEnum.IMAGE) {
         return (
           <div key={i} className={s.content__image}>
@@ -97,11 +90,11 @@ export function ArticleBlock({
         </div>
       </div>
       <Link
-        to={`/user/${authorData.userId}`}
+        to={`/user/${authorData?.userId}`}
         className={s.ArticleBlock__author}
       >
-        {authorData.nickname}{" "}
-        <span className={s.rating}>{parseNumber(authorData.rating)}</span>
+        {authorData?.nickname}{" "}
+        <span className={s.rating}>{parseNumber(authorData?.rating)}</span>
       </Link>
       <div
         className={clsx(s.ArticleBlock__content, {
