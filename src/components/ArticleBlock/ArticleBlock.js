@@ -3,6 +3,7 @@ import clsx from "clsx";
 import { Tags } from "../Tags/Tags";
 import { Link } from "react-router-dom";
 import { parseNumber } from "../../utils/string";
+import {ReactComponent as DeleteIcon} from '../../assets/icons/deleteIcon.svg'
 import s from "./ArticleBlock.module.scss";
 
 export const dataTypeEnum = {
@@ -20,6 +21,7 @@ export function ArticleBlock({
   authorData,
   articleRating,
   tags,
+  systemData = [],
   countries,
   className,
 }) {
@@ -113,8 +115,13 @@ export function ArticleBlock({
           Показать все
         </button>
       )}
-      <div className={s.ArticleBlock__tags}>
-        <Tags tags={[...tags, ...countries]} />
+      <div className={s.ArticleBlock__bottom}>
+        <div className={s.ArticleBlock__tags}>
+          <Tags tags={[...tags, ...countries, ...systemData]} />
+        </div>
+        <button className={s.ArticleBlock__delete}>
+          <DeleteIcon/>
+        </button>
       </div>
     </div>
   );

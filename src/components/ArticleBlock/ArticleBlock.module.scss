@@ -100,3 +100,16 @@
     color: $color-text-primary;
   }
 }
+
+.ArticleBlock__bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ArticleBlock__delete {
+  color: $color-text-secondary;
+  svg {
+    width: 24px;
+    height: 36px;
+  }
+}
