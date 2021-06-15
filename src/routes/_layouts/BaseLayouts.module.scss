@@ -31,8 +31,9 @@
 .BaseLayouts__back {
   display: flex;
   align-items: center;
-  margin-left: 38px;
-  margin-top: 12px;
+  padding: 16px 24px;
+  margin: 0 auto;
+  max-width: 840px;
   cursor: pointer;
 
   svg {
