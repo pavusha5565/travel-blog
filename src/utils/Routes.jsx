@@ -10,7 +10,6 @@ function ScrollToTop({ children }) {
   return <>{children}</>;
 }
 
-
 export function Routes(routes) {
   return function RoutesComp({ location, match }) {
     const pathPrefix = match?.path || "";
@@ -20,6 +19,7 @@ export function Routes(routes) {
           {routes.map((props, i) => {
             const path = props.path ? `${pathPrefix}${props.path}` : undefined;
             const newProps = {
+              location,
               ...props,
               path,
             };

@@ -63,7 +63,7 @@
       "tags": [{ "title": "Красота" }, { "title": "Море" }],
       "countries": [{ "title": "Греция" }, { "title": "Кипр" }],
       "authorData": { "nickname": "Путешественник", "rating": 123041 },
-      "articleRating": 123041
+      "articleRating": 123
     },
     {
       "id": 2,
