@@ -1,8 +1,8 @@
 @import "../../tokens";
 
 .CreateArticlePage {
-  margin: 16px 12px;
-
+  margin: 16px auto;
+  max-width: 840px;
 }
 
 :global {

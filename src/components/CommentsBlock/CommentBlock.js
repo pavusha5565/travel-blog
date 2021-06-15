@@ -24,6 +24,7 @@ export function CommentBlock({ user, comment }) {
       )}
       {answer !== null && (
         <div className={s.CommentBlock__answer}>
+          <div>Ответ на {user.nickname}</div>
           <TextField
             type="text"
             variant="outlined"

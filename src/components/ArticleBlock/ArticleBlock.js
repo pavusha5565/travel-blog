@@ -119,9 +119,9 @@ export function ArticleBlock({
         <div className={s.ArticleBlock__tags}>
           <Tags tags={[...tags, ...countries, ...systemData]} />
         </div>
-        <button className={s.ArticleBlock__delete}>
+        {/* <button className={s.ArticleBlock__delete}>
           <DeleteIcon/>
-        </button>
+        </button> */}
       </div>
     </div>
   );
